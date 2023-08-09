@@ -14,9 +14,11 @@ typeof function() // 'function'
 typeof NaN // 'number'
 ```
 
->[!note] Неправильный возвращаемый тип с помощью typeof
->```js
+>[!bug] Неправильный возвращаемый тип с помощью typeof
+>
+```js
 typeof null // 'object'
 typeof function() // 'function'
 typeof NaN // 'number'
 ```
+
