@@ -41,7 +41,8 @@ console.log (a); // Uncaught ReferenceError: Cannot access 'a' before initializa
 a = 1;  
   
 if (a === 1) {  
-    console.log(a); }  
+    console.log(a); 
+}  
   
 let a;
 ```
@@ -55,6 +56,7 @@ function letsGo() {
     console.log('go!'); // 'go!' 
 }
 ```
+
 ```js
 letsGo();   
 function letsGo() {  
@@ -80,6 +82,7 @@ const sumConst = (a, b) => a + b;
 console.log(`sumFunc(1, 2) => ${sumFunc(1, 2)}`); // 3  
 console.log(`sumFunc(1, 2) => ${sumConst(3, 4)}`); // 7
 ```
+
 ```js
 console.log(`sumFunc(1, 2) => ${sumFunc(1, 2)}`); // 3  
 console.log(`sumFunc(1, 2) => ${sumConst(3, 4)}`); // Cannot access 'sumConst' before initialization  
@@ -90,3 +93,5 @@ function sumFunc(a, b) {
     return a + b;  
 }
 ```
+
+[[Задачи Hoisiting (всплытие)]]
