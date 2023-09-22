@@ -6,7 +6,7 @@
 [[Hositing (всплытие, поднятие)]]
 [[Scope (область видимости)]]
 [[Closures (Замыкания)]]
-[[Лексическое окружения]]
+[[Лексическое окружение (LexicalEnvironment)]]
 [[Temporal Dead Zone (TDZ, Временная Мертвая Зона)]]
 [[Function expression. Funcrion declaration]]
 [[Контекст]]
