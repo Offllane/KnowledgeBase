@@ -64,5 +64,5 @@ function sumFunc(a, b) {
 ```
 >[!faq]- Ответ
 > 1. 3
-> 2. Cannot access 'sumConst' before initialization  (т.к. всплыло только объявдение функции
+> 2. Cannot access 'sumConst' before initialization  (т.к. всплыло только объявление функции
 

@@ -1,7 +1,7 @@
 [[Общие понятия программирования]]
 [[HTML]]
 [[CSS]]
-[[JavaScript]]
+[[0. JavaScript]]
 [[TypeScript]]
 [[Agnular]]
 [[RxJs]]
