@@ -8,7 +8,7 @@
 const x = 1;  
   
 const logToConsole = function () {  
-    console.log(x); // 1  
+  console.log(x); // 1  
 }  
   
 logToConsole();
