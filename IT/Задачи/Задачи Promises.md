@@ -1,4 +1,123 @@
 [[Promises]]
+### Что такое Promise?
+>[!faq]- Ответ
+> Промис это объект обертка для работы с асинхронным кодом. Этот объект может находиться в одном из трех состояний: fullfilled, pending, rejected. Объект принимает в качестве параметра функцию-executor, которая в аргументах имеет два коллбэка resolve и reject.
+### Для чего нужны промисы?
+>[!faq]- Ответ
+>Промисы придумали, чтобы организовывать асинхронный код последовательно. (Избавились от коллбэк хэлл)
+### Назовите методы для работы с результатом выполнения промиса
+>[!faq]- Ответ
+>- `then()`
+>-  `catch()`
+>- `finally()`
+
+###  Назовите методы промисов
+>[!faq]- Ответ
+>`Promise.all()`
+>`Promise.allSettled()`
+>`Promise.race()`
+`Promise.any()`
+
+### Что выведет код?
+``` js
+console.log('start');
+
+const promise1 = new Promise((resolve, reject) => {  
+  console.log(1)
+})
+
+console.log('end');
+```
+>[!faq]- Ответ
+>start 1 end
+
+```js
+console.log('start');  
+  
+const promise1 = new Promise((resolve, reject) => {  
+  console.log(1)  
+  resolve(2)  
+})  
+  
+promise1.then(res => {  
+  console.log(res)  
+})  
+  
+console.log('end');
+```
+>[!faq]- Ответ
+>start 1 end 2
+
+```js
+console.log('start');  
+  
+const promise1 = new Promise((resolve, reject) => {  
+  console.log(1)  
+  resolve(2)  
+  console.log(3)  
+})  
+  
+promise1.then(res => {  
+  console.log(res)  
+})  
+  
+console.log('end');
+```
+>[!faq]- Ответ
+>start 1 3 end 2
+
+```js
+console.log('start');  
+  
+const promise1 = new Promise((resolve, reject) => {  
+  console.log(1)  
+})  
+  
+promise1.then(res => {  
+  console.log(2)  
+})  
+  
+console.log('end');
+```
+>[!faq]- Ответ
+>start 1 end
+
+```js
+console.log('start')  
+  
+const fn = () => (new Promise((resolve, reject) => {  
+  console.log(1);  
+  resolve('success')  
+}))  
+  
+console.log('middle')  
+  
+fn().then(res => {  
+  console.log(res)  
+})  
+  
+console.log('end')
+```
+>[!faq]- Ответ
+>start middle 1 end success
+
+```js
+console.log('start')  
+  
+Promise.resolve(1).then((res) => {  
+  console.log(res)  
+})  
+  
+Promise.resolve(2).then((res) => {  
+  console.log(res)  
+})  
+  
+console.log('end')
+```
+>[!faq]- Ответ
+>start end 1 2
+
+
 ## Реализуйте полифилл для Promise.all
 ```js
 function myPromiseAll(taskList: Array<Promise<unknown>>): Promise<Array<unknown>> {  
