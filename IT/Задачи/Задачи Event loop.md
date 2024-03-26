@@ -1,7 +1,7 @@
 [[Event  Loop (Цикл событий)]]
 ### Что выведет код?
 ```js
-log(1);
+console.log(1);
 
 setTimeout(() => {
   console.log(2);
@@ -118,11 +118,12 @@ const timer1 = setTimeout(() => {
   console.log('timer1');  
   
   const promise1 = Promise.resolve().then(() => {  
-    console.log('promise1')  
-  })}, 0)  
+    console.log('promise1');  
+  })
+}, 0)  
   
 const timer2 = setTimeout(() => {  
-  console.log('timer2')  
+  console.log('timer2');  
 }, 0)
 ```
 >[!faq]- Ответ
